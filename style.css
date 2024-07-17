@@ -1,0 +1,120 @@
+:root {
+    --main-color: #288fd0;
+    --alt-color: #e2e8f0;
+    --accent-color: #f0b428;
+    --menu-btn-margin: 8px;
+    --btn-rad: 20px;
+    --rad: 8px;
+}
+
+html,
+body {
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    color: white;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: 1fr 3fr 7fr;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+ul.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.menu li {
+    margin-top: var(--menu-btn-margin);
+    margin-bottom: var(--menu-btn-margin);
+}
+
+.container {
+    display: grid;
+    color: black;
+    grid-template-rows: 1fr 1fr 5fr;
+    grid-column-start: 2;
+    grid-row: span 2;
+    background-color: var(--alt-color);
+}
+
+.header {
+    display: grid;
+    grid-auto-flow: column;
+    padding: 30px;
+    background-color: white;
+}
+
+.search-bar {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+.search-bar img {
+    padding-right: 8px;
+}
+
+.search-bar input {
+    background-color: var(--alt-color);
+    border: none;
+    border-radius: var(--btn-rad);
+    height: 26px;
+    width: 36vw;
+    max-width: 700px;
+}
+
+.action-bar {
+}
+
+.content {
+    display: grid;
+    padding: 30px;
+    padding-bottom: 60px;
+    gap: 20px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: span 2;
+    gap: 20px;
+}
+
+.card {
+    min-height: 50px;
+    background-color: white;
+    border-radius: var(--rad);
+}
+
+.announcements {
+    background-color: white;
+    border-radius: var(--rad);
+}
+
+.trending {
+    background-color: white;
+    border-radius: var(--rad);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.icon {
+    max-width: 26px;
+    height: auto;
+}
